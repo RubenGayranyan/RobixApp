@@ -6,12 +6,12 @@ android {
     namespace = "net.robixlab.android"
     // Use the latest stable SDK to avoid resource compilation crashes that can
     // happen when a preview platform is missing from the local Android SDK.
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "net.robixlab.android"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

@@ -74,14 +74,17 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/chat_pill"
+                <Button
+                    android:id="@+id/chat_model_button"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_pill"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="8dp"
-                    android:text="@string/chat_model"
+                    android:text="@string/chatgpt_link_label"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"

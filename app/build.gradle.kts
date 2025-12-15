@@ -4,14 +4,12 @@ plugins {
 
 android {
     namespace = "net.robixlab.android"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "net.robixlab.android"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

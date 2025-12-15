@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name" translatable="false">Robix.App</string>
     <string name="app_desc">GPT-agent for course materials.</string>
+    <string name="chat_subtitle">Ask anything about your lessons</string>
+    <string name="chat_model" translatable="false">GPT-5.1</string>
+    <string name="sample_system_message">Hello! I can help you study smarter. What should we explore today?</string>
+    <string name="sample_user_message">Can you explain quantum superposition in simple words?</string>
+    <string name="sample_answer_title">Certainly! Here is a quick summary:</string>
+    <string name="sample_answer_message">Superposition means a quantum object can be in multiple states at once until it is observed. Think of a coin spinning in the air—it's both heads and tails until it lands.</string>
+    <string name="message_hint">Type your message...</string>
+    <string name="send_button_description">Send message</string>
 </resources>

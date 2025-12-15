@@ -107,8 +107,9 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout messageRow = new LinearLayout(this);
         messageRow.setOrientation(LinearLayout.HORIZONTAL);
         int rowHorizontalPadding = getResources().getDimensionPixelSize(R.dimen.message_horizontal_padding);
+        int rowVerticalPadding = getResources().getDimensionPixelSize(R.dimen.message_vertical_padding);
         int messageSpacing = getResources().getDimensionPixelSize(R.dimen.message_spacing);
-        messageRow.setPadding(rowHorizontalPadding, 0, rowHorizontalPadding, messageSpacing);
+        messageRow.setPadding(rowHorizontalPadding, rowVerticalPadding, rowHorizontalPadding, messageSpacing);
         messageRow.setGravity(isUser ? android.view.Gravity.END : android.view.Gravity.START);
 
         TextView bubble = new TextView(this);

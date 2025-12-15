@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="normal_textColor">#0F172A</color>
-    <color name="backgroundColor">#F4F6FB</color>
-    <color name="highlighted_backgroundColor">#FFFFFF</color>
-    <color name="primaryColor">#6366F1</color>
-    <color name="chatBackground">#EEF2FF</color>
-    <color name="assistantBubble">#FFFFFF</color>
-    <color name="userBubble">#E6E9FF</color>
-    <color name="borderSoft">#E5E7EB</color>
-    <color name="pillBackground">#7C3AED</color>
-    <color name="headerShadow">#BFD4FF</color>
-    <color name="heroGradientStart">#7C3AED</color>
-    <color name="heroGradientEnd">#22D3EE</color>
+    <color name="normal_text_color">#0F172A</color>
+    <color name="background_color">#F4F6FB</color>
+    <color name="highlighted_background_color">#FFFFFF</color>
+    <color name="primary_color">#6366F1</color>
+    <color name="chat_background">#EEF2FF</color>
+    <color name="assistant_bubble">#FFFFFF</color>
+    <color name="user_bubble">#E6E9FF</color>
+    <color name="border_soft">#E5E7EB</color>
+    <color name="pill_background">#7C3AED</color>
+    <color name="header_shadow">#BFD4FF</color>
+    <color name="hero_gradient_start">#7C3AED</color>
+    <color name="hero_gradient_end">#22D3EE</color>
 </resources>

@@ -5,91 +5,106 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/chatBackground"
+    android:background="@color/backgroundColor"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/chat_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_header"
-        android:elevation="2dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="6dp"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="22dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:background="@drawable/bg_avatar_circle"
-            android:gravity="center"
-            android:text="R"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/chat_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/primaryColor"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            android:background="@drawable/bg_header"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="18dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:background="@drawable/bg_status_online"
-                    android:layout_marginEnd="6dp" />
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:gravity="center"
+                    android:text="R"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chat_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/chat_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/chat_subtitle"
+                        android:textColor="@color/headerShadow"
+                        android:textSize="13sp" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/chat_subtitle"
+                    android:id="@+id/chat_pill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/chat_subtitle"
-                    android:textColor="@color/normal_textColor"
-                    android:textSize="13sp" />
+                    android:background="@drawable/bg_pill"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/chat_model"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
             </LinearLayout>
-        </LinearLayout>
 
-        <TextView
-            android:id="@+id/chat_pill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_pill"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="6dp"
-            android:text="@string/chat_model"
-            android:textAllCaps="false"
-            android:textColor="@color/primaryColor"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/chat_tagline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Design a beautiful chat with a calm assistant and confident responses."
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <ScrollView
         android:id="@+id/message_scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        android:paddingHorizontal="16dp"
-        android:paddingTop="16dp"
+        android:paddingVertical="6dp"
         app:layout_constraintBottom_toTopOf="@+id/input_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,20 +115,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="24dp">
+            android:paddingBottom="24dp"
+            android:paddingTop="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:orientation="horizontal"
-                android:paddingBottom="12dp">
+                android:paddingBottom="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_assistant_bubble"
-                    android:padding="14dp"
+                    android:padding="16dp"
                     android:text="@string/sample_system_message"
                     android:textColor="@color/normal_textColor"
                     android:textSize="15sp" />
@@ -124,13 +140,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:orientation="horizontal"
-                android:paddingBottom="12dp">
+                android:paddingBottom="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_user_bubble"
-                    android:padding="14dp"
+                    android:padding="16dp"
                     android:text="@string/sample_user_message"
                     android:textColor="@color/primaryColor"
                     android:textSize="15sp"
@@ -147,13 +163,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_assistant_bubble"
+                    android:elevation="1dp"
                     android:orientation="vertical"
-                    android:padding="14dp">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="6dp"
+                        android:paddingBottom="8dp"
                         android:text="@string/sample_answer_title"
                         android:textColor="@color/normal_textColor"
                         android:textSize="14sp"
@@ -178,6 +195,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="12dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -190,21 +208,21 @@
             android:background="@drawable/bg_input_field"
             android:hint="@string/message_hint"
             android:maxLines="4"
-            android:minHeight="48dp"
-            android:paddingHorizontal="14dp"
-            android:paddingVertical="12dp"
+            android:minHeight="52dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
             android:textColor="@color/normal_textColor"
             android:textColorHint="#9FA5B1"
             android:textSize="14sp" />
 
         <ImageButton
             android:id="@+id/send_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:layout_marginStart="12dp"
             android:background="@drawable/bg_send_button"
             android:contentDescription="@string/send_button_description"
-            android:padding="12dp"
+            android:padding="14dp"
             android:src="@android:drawable/ic_menu_send"
             android:tint="@android:color/white" />
     </LinearLayout>

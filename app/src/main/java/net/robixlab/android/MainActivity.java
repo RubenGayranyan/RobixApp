@@ -106,18 +106,19 @@ public class MainActivity extends AppCompatActivity {
     private void addMessageBubble(String message, boolean isUser) {
         LinearLayout messageRow = new LinearLayout(this);
         messageRow.setOrientation(LinearLayout.HORIZONTAL);
-        int rowHorizontalPadding = (int) getResources().getDimension(R.dimen.message_horizontal_padding);
-        messageRow.setPadding(rowHorizontalPadding, 0, rowHorizontalPadding,
-                (int) getResources().getDimension(R.dimen.message_spacing));
+        int rowHorizontalPadding = getResources().getDimensionPixelSize(R.dimen.message_horizontal_padding);
+        int messageSpacing = getResources().getDimensionPixelSize(R.dimen.message_spacing);
+        messageRow.setPadding(rowHorizontalPadding, 0, rowHorizontalPadding, messageSpacing);
         messageRow.setGravity(isUser ? android.view.Gravity.END : android.view.Gravity.START);
 
         TextView bubble = new TextView(this);
         bubble.setText(message);
         bubble.setTextSize(15f);
-        bubble.setPadding((int) getResources().getDimension(R.dimen.bubble_padding_horizontal),
-                (int) getResources().getDimension(R.dimen.bubble_padding_vertical),
-                (int) getResources().getDimension(R.dimen.bubble_padding_horizontal),
-                (int) getResources().getDimension(R.dimen.bubble_padding_vertical));
+        int bubblePaddingHorizontal = getResources().getDimensionPixelSize(R.dimen.bubble_padding_horizontal);
+        int bubblePaddingVertical = getResources().getDimensionPixelSize(R.dimen.bubble_padding_vertical);
+        bubble.setPadding(bubblePaddingHorizontal, bubblePaddingVertical,
+                bubblePaddingHorizontal, bubblePaddingVertical);
+        bubble.setIncludeFontPadding(false);
         bubble.setBackground(ContextCompat.getDrawable(this,
                 isUser ? R.drawable.bg_user_bubble : R.drawable.bg_assistant_bubble));
         bubble.setTextColor(ContextCompat.getColor(this,

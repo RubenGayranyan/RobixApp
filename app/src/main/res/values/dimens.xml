@@ -2,6 +2,8 @@
 <resources>
     <dimen name="bubble_padding_horizontal">16dp</dimen>
     <dimen name="bubble_padding_vertical">16dp</dimen>
+    <dimen name="bubble_margin_horizontal">8dp</dimen>
+    <dimen name="bubble_margin_vertical">4dp</dimen>
     <dimen name="message_spacing">14dp</dimen>
     <dimen name="message_horizontal_padding">12dp</dimen>
     <dimen name="message_vertical_padding">6dp</dimen>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bubble_padding_horizontal">16dp</dimen>
+    <dimen name="bubble_padding_vertical">16dp</dimen>
+    <dimen name="message_spacing">14dp</dimen>
+</resources>

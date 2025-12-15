@@ -8,8 +8,8 @@
 
     <!-- Messages / Chat -->
     <string name="loading_message">Привет, я помогу тебя учится! Что обсудим сегодня?</string>
-    <string name="sample_user_message">Серьёзный вопрос?</string>
-    <string name="sample_answer_message">Более серьёзный ответ.</string>
+    <string name="sample_answer_message">Спасибо за сообщение: %1$s</string>
     <string name="message_hint">Введите ваше сообщение…</string>
     <string name="send_button_description">Отправить вопрос</string>
+    <string name="empty_message_error">Введите сообщение</string>
 </resources>

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "net.robixlab.android"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "net.robixlab.android"

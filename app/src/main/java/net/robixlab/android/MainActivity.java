@@ -7,6 +7,9 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ScrollView messageScroll;
     private EditText messageInput;
     private ImageButton sendButton;
+    private Button chatModelButton;
     private final Handler handler = new Handler(Looper.getMainLooper());
 
     @Override
@@ -61,10 +65,12 @@ public class MainActivity extends AppCompatActivity {
         messageScroll = findViewById(R.id.message_scroll);
         messageInput = findViewById(R.id.message_input);
         sendButton = findViewById(R.id.send_button);
+        chatModelButton = findViewById(R.id.chat_model_button);
     }
 
     private void setupInputListeners() {
         sendButton.setOnClickListener(v -> handleSendMessage());
+        chatModelButton.setOnClickListener(v -> openChatGpt());
         messageInput.setOnEditorActionListener((v, actionId, event) -> {
             if (actionId == EditorInfo.IME_ACTION_SEND ||
                     (event != null && event.getAction() == KeyEvent.ACTION_DOWN
@@ -135,5 +141,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void scrollToBottom() {
         messageScroll.post(() -> messageScroll.fullScroll(View.FOCUS_DOWN));
+    }
+
+    private void openChatGpt() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://openai.com/chatgpt"));
+        startActivity(intent);
     }
 }

@@ -14,4 +14,26 @@
     <string name="send_button_description">Отправить вопрос</string>
     <string name="empty_message_error">Введите сообщение</string>
     <string name="open_in_browser">Открыть в браузере</string>
+
+    <!-- Devices -->
+    <string name="devices_title">Устройства</string>
+    <string name="add_device">Добавить</string>
+    <string name="device_settings_description">Настройки устройства</string>
+    <string name="add_device_dialog_title">Новое устройство</string>
+    <string name="device_name_hint">Название устройства *</string>
+    <string name="app_name_hint">Приложение *</string>
+    <string name="manual_ip_label">Вводить IP вручную</string>
+    <string name="ip_hint">IP адрес *</string>
+    <string name="port_hint">Порт (опционально)</string>
+    <string name="device_action_dialog_title">Действия для %1$s</string>
+    <string name="device_actions_share">Поделиться доступом</string>
+    <string name="device_actions_open">Открыть приложение</string>
+    <string name="device_actions_cancel">Отмена</string>
+    <string name="device_settings_title">Настройки устройства</string>
+    <string name="device_settings_rename">Переименовать</string>
+    <string name="device_settings_delete">Удалить</string>
+    <string name="delete_device_confirm">Удалить %1$s?</string>
+    <string name="rename_device_hint">Новое имя</string>
+    <string name="required_field_error">Это поле обязательно</string>
+    <string name="optional_port_helper">Оставьте пустым, если порт не требуется</string>
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_device_dialog_title"
+            android:textColor="@color/normal_text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/device_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/device_name_hint"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp"
+            android:textColor="@color/normal_text_color"
+            android:textColorHint="#9FA5B1" />
+
+        <EditText
+            android:id="@+id/app_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/app_name_hint"
+            android:inputType="textCapWords"
+            android:background="@drawable/bg_input_field"
+            android:padding="12dp"
+            android:textColor="@color/normal_text_color"
+            android:textColorHint="#9FA5B1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/manual_ip_label"
+                android:textColor="@color/normal_text_color"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/manual_ip_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ip_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="@string/ip_hint"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textColor="@color/normal_text_color"
+            android:textColorHint="#9FA5B1" />
+
+        <EditText
+            android:id="@+id/port_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="@string/port_hint"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@color/normal_text_color"
+            android:textColorHint="#9FA5B1" />
+
+    </LinearLayout>
+</ScrollView>

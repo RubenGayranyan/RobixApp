@@ -4,12 +4,14 @@ plugins {
 
 android {
     namespace = "net.robixlab.android"
-    compileSdk = 36
+    // Use the latest stable SDK to avoid resource compilation crashes that can
+    // happen when a preview platform is missing from the local Android SDK.
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "net.robixlab.android"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

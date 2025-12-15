@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Robix.App</string>
+    <string name="app_name" translatable="false">Robix.App</string>
+    <string name="app_desc">GPT-agent for course materials.</string>
 </resources>

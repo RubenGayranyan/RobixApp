@@ -34,9 +34,21 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         bindViews();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        View rootView = findViewById(R.id.main);
+        int basePaddingLeft = rootView.getPaddingLeft();
+        int basePaddingTop = rootView.getPaddingTop();
+        int basePaddingRight = rootView.getPaddingRight();
+        int basePaddingBottom = rootView.getPaddingBottom();
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            Insets imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime());
+            int bottomInset = Math.max(systemBars.bottom, imeInsets.bottom);
+            v.setPadding(
+                    basePaddingLeft + systemBars.left,
+                    basePaddingTop + systemBars.top,
+                    basePaddingRight + systemBars.right,
+                    basePaddingBottom + bottomInset
+            );
             return insets;
         });
 
@@ -94,7 +106,9 @@ public class MainActivity extends AppCompatActivity {
     private void addMessageBubble(String message, boolean isUser) {
         LinearLayout messageRow = new LinearLayout(this);
         messageRow.setOrientation(LinearLayout.HORIZONTAL);
-        messageRow.setPadding(0, 0, 0, (int) getResources().getDimension(R.dimen.message_spacing));
+        int rowHorizontalPadding = (int) getResources().getDimension(R.dimen.message_horizontal_padding);
+        messageRow.setPadding(rowHorizontalPadding, 0, rowHorizontalPadding,
+                (int) getResources().getDimension(R.dimen.message_spacing));
         messageRow.setGravity(isUser ? android.view.Gravity.END : android.view.Gravity.START);
 
         TextView bubble = new TextView(this);

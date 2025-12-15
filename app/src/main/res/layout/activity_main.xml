@@ -117,26 +117,7 @@
             android:orientation="vertical"
             android:paddingBottom="24dp"
             android:paddingTop="6dp"
-            tools:ignore="MissingConstraints">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal"
-                android:paddingBottom="14dp"
-                tools:visibility="visible">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_assistant_bubble"
-                    android:padding="16dp"
-                    android:textColor="@color/normal_text_color"
-                    android:textSize="15sp"
-                    tools:text="@string/loading_message" />
-            </LinearLayout>
-        </LinearLayout>
+            tools:ignore="MissingConstraints" />
     </ScrollView>
 
     <LinearLayout

@@ -13,4 +13,5 @@
     <string name="message_hint">Введите ваше сообщение…</string>
     <string name="send_button_description">Отправить вопрос</string>
     <string name="empty_message_error">Введите сообщение</string>
+    <string name="open_in_browser">Открыть в браузере</string>
 </resources>

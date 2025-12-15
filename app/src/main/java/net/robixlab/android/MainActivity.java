@@ -3,6 +3,7 @@ package net.robixlab.android;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.Browser;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -125,6 +126,19 @@ public class MainActivity extends AppCompatActivity {
         int bubblePaddingVertical = getResources().getDimensionPixelSize(R.dimen.bubble_padding_vertical);
         bubble.setPadding(bubblePaddingHorizontal, bubblePaddingVertical,
                 bubblePaddingHorizontal, bubblePaddingVertical);
+        int bubbleMarginHorizontal = getResources().getDimensionPixelSize(R.dimen.bubble_margin_horizontal);
+        int bubbleMarginVertical = getResources().getDimensionPixelSize(R.dimen.bubble_margin_vertical);
+        LinearLayout.LayoutParams bubbleLayoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        bubbleLayoutParams.setMargins(
+                bubbleMarginHorizontal,
+                bubbleMarginVertical,
+                bubbleMarginHorizontal,
+                bubbleMarginVertical
+        );
+        bubble.setLayoutParams(bubbleLayoutParams);
         bubble.setIncludeFontPadding(false);
         bubble.setBackground(ContextCompat.getDrawable(this,
                 isUser ? R.drawable.bg_user_bubble : R.drawable.bg_assistant_bubble));
@@ -145,6 +159,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void openChatGpt() {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://openai.com/chatgpt"));
-        startActivity(intent);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setPackage(null);
+        intent.putExtra(Browser.EXTRA_APPLICATION_ID, getPackageName());
+        Intent chooser = Intent.createChooser(intent, getString(R.string.open_in_browser));
+        startActivity(chooser);
     }
 }
